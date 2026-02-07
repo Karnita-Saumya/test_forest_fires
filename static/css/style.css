@@ -1,0 +1,317 @@
+/* ===== BODY ===== */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    /* Dark gradient matching the Fire Weather Index page */
+    background: linear-gradient(135deg, #2c1810 0%, #1a3a3a 50%, #2a4a5a 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 0;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Subtle ambient glow */
+body::before {
+    content: '';
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(180, 100, 80, 0.15), transparent);
+    filter: blur(80px);
+    top: -100px;
+    right: 10%;
+    z-index: 0;
+    animation: pulseGlow 8s ease-in-out infinite;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(80, 120, 140, 0.15), transparent);
+    filter: blur(80px);
+    bottom: -100px;
+    left: 10%;
+    z-index: 0;
+    animation: pulseGlow 8s ease-in-out infinite;
+    animation-delay: -4s;
+}
+
+@keyframes pulseGlow {
+    0%, 100% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.1); }
+}
+
+/* ===== MAIN GLASS CARD ===== */
+.login {
+    width: 420px;
+    padding: 45px;
+    position: relative;
+    z-index: 1;
+    /* Dark glassmorphism matching the feature cards */
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.08),
+        rgba(255, 255, 255, 0.05)
+    );
+    backdrop-filter: blur(25px) saturate(150%);
+    -webkit-backdrop-filter: blur(25px) saturate(150%);
+    border-radius: 24px;
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        0 0 60px rgba(180, 100, 80, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    text-align: center;
+    animation: cardEntrance 0.8s ease-out;
+    transition: all 0.4s ease;
+}
+
+.login:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 12px 40px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15),
+        0 0 80px rgba(180, 100, 80, 0.12);
+    border-color: rgba(255, 255, 255, 0.18);
+}
+
+@keyframes cardEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== HEADING ===== */
+.login h1 {
+    margin-bottom: 8px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 32px;
+    text-shadow: 0 2px 12px rgba(255, 255, 255, 0.15);
+    letter-spacing: 0.5px;
+}
+
+/* Subtitle */
+.subtitle {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 30px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+}
+
+/* ===== INPUTS ===== */
+.login input,
+.login select {
+    width: 100%;
+    padding: 14px 18px;
+    margin: 10px 0;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    outline: none;
+    font-size: 14px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(10px);
+    color: #ffffff;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 
+        inset 0 2px 4px rgba(0, 0, 0, 0.2),
+        0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Focus effect */
+.login input:focus,
+.login select:focus {
+    border-color: rgba(255, 140, 100, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 
+        0 0 0 3px rgba(255, 140, 100, 0.1),
+        0 4px 16px rgba(255, 140, 100, 0.15),
+        inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Select arrow styling */
+.login select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='rgba(255,255,255,0.6)' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    padding-right: 40px;
+}
+
+/* ===== BUTTON ===== */
+.login button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 22px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(255, 120, 80, 0.85) 0%, rgba(200, 80, 60, 0.85) 100%);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 
+        0 6px 20px rgba(255, 100, 70, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Button shimmer effect */
+.login button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    transition: left 0.6s ease;
+}
+
+.login button:hover::before {
+    left: 100%;
+}
+
+.login button:hover {
+    background: linear-gradient(135deg, rgba(255, 130, 90, 0.95) 0%, rgba(210, 90, 70, 0.95) 100%);
+    transform: translateY(-2px);
+    box-shadow: 
+        0 8px 26px rgba(255, 100, 70, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.login button:active {
+    transform: translateY(0);
+    box-shadow: 
+        0 4px 14px rgba(255, 100, 70, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* ===== RESULT BOX ===== */
+.result-box {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 16px;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.08),
+        rgba(255, 255, 255, 0.04)
+    );
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 
+        0 4px 16px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    animation: resultFadeIn 0.5s ease-out;
+}
+
+@keyframes resultFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Result text */
+.result-text {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 
+        0 2px 8px rgba(255, 120, 80, 0.3),
+        0 0 20px rgba(255, 120, 80, 0.2);
+    letter-spacing: 0.5px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 500px) {
+    body {
+        padding: 20px 10px;
+    }
+    .login {
+        width: 90%;
+        padding: 35px 28px;
+    }
+    .login h1 {
+        font-size: 28px;
+    }
+    body::before,
+    body::after {
+        display: none;
+    }
+}
+
+/* ===== SUBTLE EDGE GLOW ===== */
+.login::after {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 120, 80, 0.2),
+        transparent 40%,
+        transparent 60%,
+        rgba(80, 120, 140, 0.2)
+    );
+    border-radius: 24px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.login:hover::after {
+    opacity: 1;
+}
+
+/* ===== SCROLLBAR STYLING (Optional) ===== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}

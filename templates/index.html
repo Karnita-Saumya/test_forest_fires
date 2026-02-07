@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FWI Predictor</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/landing.css') }}">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- 🔥 CSS Fire Background -->
+<div class="bg-blobs">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<div class="container">
+
+    <h1>🔥 Fire Weather Index</h1>
+    <p class="subtitle">
+        AI-Powered Forest Fire Risk Prediction Platform
+    </p>
+
+    <!-- ===== FEATURES ===== -->
+    <section>
+        <h2>Platform Features</h2>
+
+        <div class="features">
+
+            <div class="card">
+                <i class="fa-solid fa-temperature-high"></i>
+                Temperature Analysis
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-water"></i>
+                Humidity Monitoring
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-wind"></i>
+                Wind Speed Impact
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-cloud-rain"></i>
+                Rainfall Detection
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-fire"></i>
+                Fire Risk Index
+            </div>
+
+            <div class="card">
+                <i class="fa-solid fa-brain"></i>
+                ML Prediction Engine
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 📊 DATASET -->
+    <section>
+        <h2>Dataset Preview</h2>
+
+        <table>
+            <tr>
+                <th>Temp</th>
+                <th>RH</th>
+                <th>Ws</th>
+                <th>Rain</th>
+                <th>FWI</th>
+            </tr>
+
+            <tr>
+                <td>29</td>
+                <td>57</td>
+                <td>18</td>
+                <td>0.0</td>
+                <td>5.2</td>
+            </tr>
+
+            <tr>
+                <td>35</td>
+                <td>42</td>
+                <td>22</td>
+                <td>0.1</td>
+                <td>12.6</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- 🧠 ACCURACY -->
+    <section>
+        <h2>Model Performance</h2>
+
+        <div class="accuracy-box">
+            <p><b>Algorithm :</b> Ridge Regression</p>
+            <p><b>R² Score :</b> 98.14 %</p>
+            <p><b>MAE :</b>0.657</p>
+            <p><b>Scaler :</b> StandardScaler</p>
+        </div>
+    </section>
+
+
+    <!-- 🚀 BUTTON -->
+    <a href="{{ url_for('predict_datapoint') }}">
+        <button class="start-btn">
+            Start Prediction →
+        </button>
+    </a>
+
+</div>
+
+</body>
+</html>

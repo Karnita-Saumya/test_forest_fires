@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>FWI Prediction</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+<!-- Icons -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="login">
+
+    <h1>🔥 FWI Predictor</h1>
+    <div class="subtitle">
+        Forest Fire Weather Risk Analysis
+    </div>
+
+    <form action="{{ url_for('predict_datapoint') }}" method="post">
+
+        <div class="input-group">
+            <span><i class="fa-solid fa-temperature-high"></i></span>
+            <input type="text" name="Temperature" placeholder="Temperature (°C)" required>
+        </div>
+
+        <div class="input-group">
+            <span><i class="fa-solid fa-water"></i></span>
+            <input type="text" name="RH" placeholder="Relative Humidity (%)" required>
+        </div>
+
+        <div class="input-group">
+            <span><i class="fa-solid fa-wind"></i></span>
+            <input type="text" name="Ws" placeholder="Wind Speed (km/h)" required>
+        </div>
+
+        <div class="input-group">
+            <span><i class="fa-solid fa-cloud-rain"></i></span>
+            <input type="text" name="Rain" placeholder="Rain (mm)" required>
+        </div>
+
+        <div class="input-group">
+            <span><i class="fa-solid fa-fire"></i></span>
+            <input type="text" name="FFMC" placeholder="FFMC Index" required>
+        </div>
+
+        <div class="input-group">
+            <span><i class="fa-solid fa-mountain"></i></span>
+            <input type="text" name="DMC" placeholder="DMC Index" required>
+        </div>
+
+        <div class="input-group">
+            <span><i class="fa-solid fa-bolt"></i></span>
+            <input type="text" name="ISI" placeholder="ISI Index" required>
+        </div>
+
+        <div class="input-group">
+            <span><i class="fa-solid fa-triangle-exclamation"></i></span>
+            <input type="text" name="Classes" placeholder="Fire Class" required>
+        </div>
+
+        <div class="input-group">
+            <span><i class="fa-solid fa-location-dot"></i></span>
+            <input type="text" name="Region" placeholder="Region" required>
+        </div>
+
+        <button type="submit">Predict Fire Risk</button>
+
+    </form>
+
+    {% if results %}
+    <div class="result-box">
+        <div class="risk-label">Predicted Fire Weather Index</div>
+        <div class="result-text">
+            {{ results }}
+        </div>
+    </div>
+    {% endif %}
+
+</div>
+
+</body>
+</html>
