@@ -86,4 +86,61 @@ Vercel, Git, GitHub
 ---
 
 ## 📂 Project Structure
+ test_forest_fires/
+│── static/
+│── templates/
+│── model/
+│── app.py
+│── requirements.txt
+│── README.md
+
+
+---
+
+## 📈 Model Evaluation
+
+- Accuracy / R² Score  
+- Mean Absolute Error  
+- Mean Squared Error  
+- Performance optimized on unseen data  
+
+---
+
+## 💼 Skills Demonstrated
+
+- Machine Learning  
+- Predictive Modeling  
+- Data Preprocessing  
+- Feature Engineering  
+- Model Evaluation  
+- Flask Development  
+- Web Deployment  
+- Data Analysis  
+
+---
+
+## 🌍 Real-World Applications
+
+- Forest Fire Early Warning Systems  
+- Environmental Monitoring  
+- Disaster Management  
+- Climate Risk Analysis  
+
+---
+
+## 🚀 Deployment
+
+👉 https://test-forest-fires-neon.vercel.app/
+
+---
+
+## 🔮 Future Enhancements
+
+- Live Weather API Integration  
+- Satellite Data Processing  
+- Deep Learning Models  
+- GIS Map Visualization  
+- Mobile Optimization  
+
+
 
