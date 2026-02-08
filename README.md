@@ -86,13 +86,16 @@ Vercel, Git, GitHub
 ---
 
 ## 📂 Project Structure
- test_forest_fires/
-│── static/
-│── templates/
-│── model/
-│── app.py
-│── requirements.txt
-│── README.md
+
+```
+test_forest_fires/
+│── static/                 # CSS, JS, assets
+│── templates/              # HTML templates
+│── model/                  # Trained ML model files
+│── app.py                  # Flask application
+│── requirements.txt        # Dependencies
+│── README.md               # Documentation
+```
 
 
 ---
