@@ -1,178 +1,89 @@
-🌲 Forest Fire Prediction System — ATS Optimized
+# 🌲 Forest Fire Prediction System — ATS Optimized
 
 AI-powered Machine Learning web application designed to predict the probability of forest fire occurrence using environmental and meteorological parameters. Built with an end-to-end ML pipeline and deployed as a production-ready web solution.
 
-🔗 Live Application: https://test-forest-fires-neon.vercel.app/
+🔗 **Live Application:** https://test-forest-fires-neon.vercel.app/  
+📂 **Repository:** https://github.com/Karnita-Saumya/test_forest_fires
 
-📂 Repository: https://github.com/Karnita-Saumya/test_forest_fires
+---
 
-📌 Project Overview
+## 🏷️ Badges
 
-Developed an intelligent predictive system that analyzes climatic and environmental factors to forecast forest fire risk. The solution helps in early warning, disaster prevention planning, and environmental risk assessment.
+![Python](https://img.shields.io/badge/Python-3.9-blue?logo=python)
+![Flask](https://img.shields.io/badge/Flask-Web%20Framework-black?logo=flask)
+![Machine Learning](https://img.shields.io/badge/Machine-Learning-orange?logo=scikit-learn)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Model-yellow?logo=scikit-learn)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-purple?logo=pandas)
+![NumPy](https://img.shields.io/badge/NumPy-Numerical%20Computing-blue?logo=numpy)
+![HTML](https://img.shields.io/badge/HTML5-Frontend-red?logo=html5)
+![CSS](https://img.shields.io/badge/CSS3-Styling-blue?logo=css3)
+![JavaScript](https://img.shields.io/badge/JavaScript-Frontend-yellow?logo=javascript)
+![Vercel](https://img.shields.io/badge/Deployment-Vercel-black?logo=vercel)
+![GitHub](https://img.shields.io/badge/Version%20Control-GitHub-black?logo=github)
 
-🎯 Key Highlights (ATS Friendly)
+---
 
-Built an end-to-end Machine Learning pipeline from data preprocessing to deployment
+## 📌 Project Overview
 
-Implemented Supervised Learning algorithms for fire risk prediction
+Developed an intelligent predictive system that analyzes climatic and environmental factors to forecast forest fire risk. The solution supports early warning, disaster prevention planning, and environmental risk assessment.
 
-Performed Exploratory Data Analysis (EDA) and feature engineering
+---
 
-Achieved optimized model performance using evaluation metrics
+## 🎯 Key Highlights
 
-Deployed ML model using Flask Web Framework
+- Built an **end-to-end Machine Learning pipeline**  
+- Implemented **Supervised Learning algorithms**  
+- Performed **EDA & Feature Engineering**  
+- Optimized model using evaluation metrics  
+- Deployed using **Flask Web Framework**  
+- Integrated responsive frontend UI  
+- Cloud deployment on **Vercel**
 
-Integrated frontend UI for real-time predictions
+---
 
-Hosted and deployed on Vercel cloud platform
+## 🧠 Machine Learning Workflow
 
-🧠 Machine Learning Implementation
+1. Data Collection  
+2. Data Cleaning & Preprocessing  
+3. Exploratory Data Analysis  
+4. Feature Selection & Scaling  
+5. Model Training  
+6. Model Evaluation  
+7. Model Serialization (Pickle)  
+8. Web Deployment  
 
-Workflow:
+---
 
-Data Collection & Understanding
+## 📊 Input Features
 
-Data Cleaning & Missing Value Handling
+- Temperature  
+- Relative Humidity  
+- Wind Speed  
+- Rainfall  
+- FFMC Index  
+- DMC Index  
+- DC Index  
+- ISI Index  
 
-Exploratory Data Analysis
+---
 
-Feature Selection & Scaling
+## 🛠️ Tech Stack
 
-Model Training
+**Programming:** Python  
 
-Model Evaluation
+**Machine Learning:**  
+Scikit-learn, Pandas, NumPy  
 
-Model Serialization (Pickle)
+**Visualization:**  
+Matplotlib, Seaborn  
 
-Web Deployment
+**Web Development:**  
+Flask, HTML5, CSS3, JavaScript  
 
-📊 Input Features
+**Deployment & Tools:**  
+Vercel, Git, GitHub  
 
-Model predictions are based on environmental attributes such as:
+---
 
-Temperature
+## 📂 Project Structure
 
-Relative Humidity
-
-Wind Speed
-
-Rainfall
-
-FFMC Index
-
-DMC Index
-
-DC Index
-
-ISI Index
-
-These parameters are critical indicators in wildfire risk assessment models.
-
-🛠️ Tech Stack & Tools
-
-Programming & Scripting
-
-Python
-
-Machine Learning & Data Science
-
-Scikit-learn
-
-Pandas
-
-NumPy
-
-Data Visualization
-
-Matplotlib
-
-Seaborn
-
-Web Development
-
-Flask
-
-HTML5
-
-CSS3
-
-JavaScript
-
-Deployment & Version Control
-
-Vercel
-
-Git
-
-GitHub
-
-📂 System Architecture
-User Input → Flask Backend → ML Model → Prediction → UI Display
-
-📈 Model Evaluation
-
-Applied regression/classification algorithms
-
-Evaluated using standard metrics such as:
-
-Accuracy / R² Score
-
-Mean Absolute Error
-
-Mean Squared Error
-
-Tuned model for better generalization on unseen data
-
-💼 Skills Demonstrated (ATS Keywords)
-
-Machine Learning
-
-Predictive Modeling
-
-Data Preprocessing
-
-Feature Engineering
-
-Model Evaluation
-
-Flask Development
-
-REST Integration
-
-Web Deployment
-
-Data Analysis
-
-Scikit-learn
-
-End-to-End Project Development
-
-🌍 Real-World Applications
-
-Forest Fire Early Warning Systems
-
-Environmental Monitoring Agencies
-
-Disaster Management Departments
-
-Climate Risk Analytics
-
-Research & Policy Planning
-
-🚀 Deployment
-
-The application is deployed and publicly accessible:
-
-👉 https://test-forest-fires-neon.vercel.app/
-
-🔮 Future Scope
-
-Integration with Live Weather APIs
-
-Satellite Image Data Processing
-
-Deep Learning Models (CNN/LSTM)
-
-GIS Map Visualization
-
-Mobile Responsive Expansion
